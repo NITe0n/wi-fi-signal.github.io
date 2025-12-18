@@ -1,4 +1,5 @@
 {
   "name": "WiFi Signal Mapper",
-  "description": "A cross-platform tool to map and record Wi-Fi signal strength (dBm) on floor plans. Features image upload, interactive point placement, and data export."
+  "description": "A cross-platform tool to map and record Wi-Fi signal strength (dBm) on floor plans. Features image upload, interactive point placement, and data export.",
+  "requestFramePermissions": []
 }
