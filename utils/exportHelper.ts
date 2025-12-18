@@ -1,4 +1,4 @@
-import { WifiPoint, ImageState } from '../types';
+import { WifiPoint, ImageState } from '../types.ts';
 import * as XLSX from 'xlsx';
 
 export const generateExport = async (
@@ -33,7 +33,8 @@ export const generateExport = async (
   ctx.drawImage(img, 0, 0);
 
   // Draw points
-  const fontSize = Math.max(20, Math.floor(imageState.width * 0.02)); // Responsive font size
+  // Further reduced font size to match user request (0.01 multiplier instead of 0.015)
+  const fontSize = Math.max(12, Math.floor(imageState.width * 0.01)); 
   const radius = fontSize * 1.2;
 
   ctx.font = `bold ${fontSize}px sans-serif`;
@@ -49,7 +50,9 @@ export const generateExport = async (
     ctx.arc(px, py, radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'rgba(239, 68, 68, 0.9)'; // Tailwind red-500
     ctx.fill();
-    ctx.lineWidth = 3;
+    
+    // Scale line width based on size, but keep minimum visible
+    ctx.lineWidth = Math.max(2, fontSize * 0.15);
     ctx.strokeStyle = '#ffffff';
     ctx.stroke();
 
