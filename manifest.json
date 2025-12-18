@@ -1,0 +1,15 @@
+{
+  "short_name": "WiFiMap",
+  "name": "WiFi Signal Mapper",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/93/93158.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff"
+}
