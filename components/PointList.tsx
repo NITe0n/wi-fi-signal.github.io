@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { WifiPoint } from '../types';
+import { WifiPoint } from '../types.ts';
 import { Trash2, Signal } from 'lucide-react';
 
 interface PointListProps {
