@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
-import { WifiPoint, ImageState } from './types';
-import { MapCanvas } from './components/MapCanvas';
-import { PointList } from './components/PointList';
-import { generateExport } from './utils/exportHelper';
+import { WifiPoint, ImageState } from './types.ts';
+import { MapCanvas } from './components/MapCanvas.tsx';
+import { PointList } from './components/PointList.tsx';
+import { generateExport } from './utils/exportHelper.ts';
 import { Download, Wifi, RotateCcw, ImagePlus } from 'lucide-react';
 
 const App: React.FC = () => {
